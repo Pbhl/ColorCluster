@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw
 import pandas as pd
 m=2 #magnification
-df=pd.read_csv("billgates.csv")#read csv file
+df=pd.read_csv("output_img.csv")#read csv file
 out = Image.new("RGB",(int((df['X'].max()*m)),int((df['Y'].max()*m)))) #create new blank image of appropriate size
 dout = ImageDraw.Draw(out)
 for index,row in df.iterrows():
